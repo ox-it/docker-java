@@ -28,7 +28,8 @@ RUN \
   tar -zxf $JDK_VERSION.tgz -C /opt/jdk/$JDK_VERSION --strip-components 1 && \
   rm $JDK_VERSION.tgz && \
   update-alternatives --install /usr/bin/java java /opt/jdk/$JDK_VERSION/bin/java 100 && \
-  update-alternatives --install /usr/bin/javac javac /opt/jdk/$JDK_VERSION/bin/javac 100
+  update-alternatives --install /usr/bin/javac javac /opt/jdk/$JDK_VERSION/bin/javac 100 && \
+  update-alternatives --install /usr/bin/jar jar /opt/jdk/$JDK_VERSION/bin/jar 100
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /opt/jdk/$JDK_VERSION
