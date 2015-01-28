@@ -1,4 +1,4 @@
-= Docker Oracle Java Image
+# Docker Oracle Java Image
 
 This is a simple image that grabs a copy of the Oracle JDK and installs it
 in /opt/jdk and sets up the links and JAVA_HOME. This image was created because
