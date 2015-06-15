@@ -16,14 +16,14 @@ MAINTAINER Matthew Buckett <matthew.buckett@it.ox.ac.uk>
 
 # The version we're getting. 
 # Make sure to update the URL when this gets changed
-ENV JDK_VERSION jdk-7u76
+ENV JDK_VERSION jdk-7u80
 
 # Do stuff in /tmp
 WORKDIR /tmp
 
 # Install Java.
 RUN \
-  curl -s -L -o $JDK_VERSION.tgz -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u76-b13/jdk-7u76-linux-x64.tar.gz && \
+  curl -s -L -o $JDK_VERSION.tgz -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz && \
   mkdir -p /opt/jdk/$JDK_VERSION && \
   tar -zxf $JDK_VERSION.tgz -C /opt/jdk/$JDK_VERSION --strip-components 1 && \
   rm $JDK_VERSION.tgz && \
