@@ -3,7 +3,7 @@
 # 
 
 # Pull base image.
-FROM ubuntu:14.04.2
+FROM ubuntu:14.04.4
 
 # Install curl so we can grab the file
 RUN \
