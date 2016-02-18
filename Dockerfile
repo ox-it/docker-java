@@ -18,7 +18,7 @@ MAINTAINER Matthew Buckett <matthew.buckett@it.ox.ac.uk>
 # Make sure to update the URL when this gets changed
 ENV JDK_VERSION jdk-7u80
 # If you need to build a newer version without changing the JDK version increment the build version.
-ENV BUILD_VERSION 01
+ENV BUILD_VERSION 02
 
 # Do stuff in /tmp
 WORKDIR /tmp
