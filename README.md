@@ -13,3 +13,5 @@ Dockerfile to tag it.
 If the tag looks good you should push the tag to github and have the docker hub
 rebuild the image. Then update any downstream projects to use the newer tag.
 
+The `build.sh` script builds a local copy but should just be used for testing as
+it's better to have the clean environment of the docker hub make the public builds.
