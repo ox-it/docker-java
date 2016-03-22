@@ -7,7 +7,6 @@ git diff-index --quiet --cached HEAD || ( echo "Staged but not yet committed cha
 git diff-files --quiet || ( echo "Working tree is dirty." 1>&2; exit 1)
 test -z "$(git ls-files --exclude-standard --others)" || ( echo "Untracked files in working tree." 1>&2; exit 1)
 
-# Build the image
 docker build -t oxit/java .
 
 version=$(docker run oxit/java sh -c 'echo ${JDK_VERSION}-${BUILD_VERSION}')
