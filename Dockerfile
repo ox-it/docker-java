@@ -16,7 +16,7 @@ MAINTAINER Matthew Buckett <matthew.buckett@it.ox.ac.uk>
 
 # The version we're getting. 
 # Make sure to update the URL when this gets changed
-ENV JDK_VERSION jdk-8u74
+ENV JDK_VERSION jdk-8u121
 # If you need to build a newer version without changing the JDK version increment the build version.
 ENV BUILD_VERSION 01
 
@@ -25,7 +25,7 @@ WORKDIR /tmp
 
 # Install Java.
 RUN \
-  curl -s -L -o $JDK_VERSION.tgz -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u74-b02/jdk-8u74-linux-x64.tar.gz && \
+  curl -s -L -o $JDK_VERSION.tgz -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz && \
   mkdir -p /opt/jdk/$JDK_VERSION && \
   tar -zxf $JDK_VERSION.tgz -C /opt/jdk/$JDK_VERSION --strip-components 1 && \
   rm $JDK_VERSION.tgz && \
