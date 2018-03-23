@@ -3,7 +3,7 @@
 # 
 
 # Pull base image.
-FROM ubuntu:14.04.4
+FROM ubuntu:18.04
 
 # Install curl so we can grab the file
 RUN \
@@ -16,7 +16,7 @@ MAINTAINER Matthew Buckett <matthew.buckett@it.ox.ac.uk>
 
 # The version we're getting. 
 # Make sure to update the URL when this gets changed
-ENV JDK_VERSION jdk-8u151
+ENV JDK_VERSION jdk-8u161
 # If you need to build a newer version without changing the JDK version increment the build version.
 ENV BUILD_VERSION 01
 
@@ -25,7 +25,7 @@ WORKDIR /tmp
 
 # Install Java.
 RUN \
-  curl -s -L -o $JDK_VERSION.tgz -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz && \
+  curl -s -L -o $JDK_VERSION.tgz -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz && \
   mkdir -p /opt/jdk/$JDK_VERSION && \
   tar -zxf $JDK_VERSION.tgz -C /opt/jdk/$JDK_VERSION --strip-components 1 && \
   rm $JDK_VERSION.tgz && \
