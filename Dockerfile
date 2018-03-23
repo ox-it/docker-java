@@ -6,9 +6,10 @@
 FROM ubuntu:18.04
 
 # Install curl so we can grab the file
+# Install faketime so we can pretent it's pub time on a Friday
 RUN \
   apt-get -qq update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -qq -y curl && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -qq -y curl faketime && \
   rm -rf /var/lib/apt/lists/*
 
 # Who did this?
@@ -18,7 +19,7 @@ MAINTAINER Matthew Buckett <matthew.buckett@it.ox.ac.uk>
 # Make sure to update the URL when this gets changed
 ENV JDK_VERSION jdk-8u161
 # If you need to build a newer version without changing the JDK version increment the build version.
-ENV BUILD_VERSION 01
+ENV BUILD_VERSION 02
 
 # Do stuff in /tmp
 WORKDIR /tmp
