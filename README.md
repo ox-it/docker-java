@@ -1,3 +1,7 @@
+# Unsupported
+
+This is no longer used/supported as we have switched to using OpenJDK.
+
 # Docker Oracle Java Image
 
 This is a simple image that grabs a copy of the Oracle JDK and installs it
@@ -15,3 +19,4 @@ rebuild the image. Then update any downstream projects to use the newer tag.
 
 The `build.sh` script builds a local copy but should just be used for testing as
 it's better to have the clean environment of the docker hub make the public builds.
+
